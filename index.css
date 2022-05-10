@@ -441,20 +441,20 @@ template {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 118px;
+  top: calc(var(--vh, 1vh) * 100);
   height: 0;
   opacity: 0;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
 }
 .l-header-menu.active {
-  height: calc(100% - 118px);
+  top: 0;
+  height: 100%;
   opacity: 1;
 }
 @media (max-width: 767px) {
   .l-header-menu.active {
-    top: 88px;
-    height: calc(100% - 88px);
+    height: 100%;
   }
 }
 
@@ -1100,7 +1100,7 @@ canvas {
   opacity: 0.5;
   border: 1px solid white;
   border-radius: 50%;
-  box-shadow: 1px 1px 3px rgba(17, 17, 17, 0.5);
+  filter: drop-shadow(1px 1px 3px black);
 }
 .v-sideButton .border_up {
   margin-bottom: 1rem;
@@ -1113,7 +1113,7 @@ canvas {
   width: 30px;
   height: 30px;
   opacity: 0.8;
-  box-shadow: 1px 1px 3px rgba(17, 17, 17, 0.5);
+  filter: drop-shadow(1px 1px 3px black);
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
